@@ -139,7 +139,7 @@ for index_sentence in range(len(parsed_sentences)):
     for index_word in range(SEQUENCE_LEN):
         if index_word < sent_lens[index_sentence]:
             sent_wids[index_sentence,index_word] = lookup_word2id(temp_words[index_word])
-            sample_seq_weights[index_sentence,index_word] = lexicon.get_word_sentiment_weight(temp_words[index_word])
+#             sample_seq_weights[index_sentence,index_word] = lexicon.get_word_sentiment_weight(temp_words[index_word])
         else:
             sent_wids[index_sentence, index_word] = lookup_word2id('PAD')
 
